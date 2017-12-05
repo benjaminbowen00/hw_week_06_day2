@@ -17,8 +17,12 @@ public class Shop {
         return stock.size();
     }
 
+    public boolean isFull() {
+        return this.stock.size() == capacity;
+    }
+
     public void addItem(Item item) {
-        if (this.countStock() < this.capacity) {
+        if (!isFull()) {
             this.stock.add(item);
         }
     }
@@ -38,5 +42,13 @@ public class Shop {
             this.removeItem(item);
             warehouse.addItem(item);
         }
+    }
+
+    public double valueOfStock(){
+        double total = 0;
+        for (int i=0; i<this.countStock();i++) {
+            total += this.stock.get(i).getPrice();
+        }
+        return total;
     }
 }

@@ -52,6 +52,25 @@ public class ShopTest {
     }
 
     @Test
+    public void canShowCapacityNotReached(){
+        myShop.addItem(item1);
+        myShop.addItem(item2);
+        myShop.addItem(item3);
+        assertEquals(false, myShop.isFull());
+    }
+
+    @Test
+    public void canShowCapacityReached(){
+        int x  = 0;
+        while (x < 200) {
+            myShop.addItem(item1);
+            x++;
+        }
+        assertEquals(true, myShop.isFull());
+    }
+
+
+    @Test
     public void canRemoveItem() {
         myShop.addItem(item1);
         myShop.addItem(item2);
@@ -75,5 +94,12 @@ public class ShopTest {
         myShop.sendItemBack(item2, myWarehouse);
         assertEquals(1, myWarehouse.countStock());
         assertEquals(1, myShop.countStock());
+    }
+
+    public void canSumPrices() {
+        myShop.addItem(item1);
+        myShop.addItem(item2);
+        myShop.addItem(item3);
+    assertEquals(1299.99, myShop.valueOfStock(), 0.01);
     }
 }
