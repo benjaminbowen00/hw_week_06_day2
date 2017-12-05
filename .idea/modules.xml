@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaShopClassesHW.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaShopClassesHW.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaShopClassesHW_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaShopClassesHW_main.iml" group="JavaShopClassesHW" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaShopClassesHW_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaShopClassesHW_test.iml" group="JavaShopClassesHW" />
+    </modules>
+  </component>
+</project>
